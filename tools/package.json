@@ -1,0 +1,1 @@
+{"name":"qr-gate-build","private":true,"type":"module","version":"1.0.0","dependencies":{"jsqr":"^1.4.0","pngjs":"^7.0.0","qrcode":"^1.5.4"}}
