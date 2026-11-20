@@ -1,0 +1,15 @@
+# 本地构建密钥与明文渠道表，绝不进仓库
+tools/channels.local.json
+tools/secret.local.json
+
+# 依赖
+tools/node_modules/
+npm-debug.log*
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 桌面推送器（本地工具，不随站点发布）
+GitHub Pages源码推送器/
