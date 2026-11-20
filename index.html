@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>网盘入口</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<main class="sheet">
+  <span class="mark"></span>
+  <h1>网盘入口</h1>
+  <p class="lede">选择网盘，扫码直接跳转对应链接</p>
+
+  <hr class="rule">
+
+  <label class="label" for="ch">网盘</label>
+  <div class="pick">
+    <select id="ch" autocomplete="off"></select>
+  </div>
+
+  <button class="act" id="go" type="button">
+    <span>生成二维码</span><span class="arrow">→</span>
+  </button>
+
+  <section class="stage">
+    <div class="frame"><canvas id="qr" width="0" height="0" aria-label="二维码"></canvas></div>
+    <p class="hint" id="hint">未生成</p>
+  </section>
+
+  <p class="foot">请使用手机扫码<br>二维码仅本次有效，请勿转发</p>
+</main>
+
+<div class="veil" id="lock" hidden>
+  <div class="veil-box">
+    <h2>环境异常</h2>
+    <p id="lock-msg">检测到调试环境，已停止服务。</p>
+    <button class="act ghost" type="button" id="reload"><span>重新载入</span><span class="arrow">↻</span></button>
+  </div>
+</div>
+
+<script src="assets/payload.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
